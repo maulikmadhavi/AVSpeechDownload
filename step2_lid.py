@@ -1,5 +1,11 @@
+    """
+    This script is used to check which audio is English langauge.
+    
+    """
 import torchaudio
 from speechbrain.pretrained import EncoderClassifier
+
+from pathlib import Path
 language_id = EncoderClassifier.from_hparams(source="speechbrain/lang-id-voxlingua107-ecapa", savedir="tmp")
 
 
